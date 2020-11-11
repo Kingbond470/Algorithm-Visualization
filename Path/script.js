@@ -1,15 +1,5 @@
-//Things to do:
-// Add more algorithms (research)
-	// Bidirectional depth first search
-	// Bidirectional A*?
-	// Bidirectional breadth first search
-// Add more maze creation functions
-	// Do pure horizontal and pure vertical maze
-	// Do spiral maze from middle?
-/* ------------------------------------ */
-/* ---- Var Declarations & Preamble---- */
-/* ------------------------------------ */
 
+/* ---- Var Declarations & Preamble---- */
 var totalRows = 25;
 var totalCols = 40;
 var inProgress = false;
@@ -41,9 +31,7 @@ function generateGrid( rows, cols ) {
 var myGrid = generateGrid( totalRows, totalCols);
 $( "#tableContainer" ).append( myGrid );
 
-/* --------------------------- */
 /* --- OBJECT DECLARATIONS --- */
-/* --------------------------- */
 
 function Queue() { 
  this.stack = new Array();
@@ -130,9 +118,7 @@ function minHeap() {
 	}
 }
 
-/* ------------------------- */
 /* ---- MOUSE FUNCTIONS ---- */
-/* ------------------------- */
 
 $( "td" ).mousedown(function(){
 	var index = $( "td" ).index( this );
@@ -202,9 +188,7 @@ $( "body" ).mouseup(function(){
 	movingEnd = false;
 });
 
-/* ----------------- */
 /* ---- BUTTONS ---- */
-/* ----------------- */
 
 $( "#startBtn" ).click(function(){
     if ( algorithm == null ){ return;}
@@ -217,10 +201,7 @@ $( "#clearBtn" ).click(function(){
 	clearBoard(keepWalls = false);
 });
 
-
-/* --------------------- */
 /* --- NAV BAR MENUS --- */
-/* --------------------- */
 
 $( "#algorithms .dropdown-item").click(function(){
 	if ( inProgress ){ update("wait"); return; }
@@ -253,10 +234,7 @@ $( "#mazes .dropdown-item").click(function(){
 	console.log("Maze has been changd to: " + maze);
 });
 
-/* ----------------- */
 /* --- FUNCTIONS --- */
-/* ----------------- */
-
 function moveStartOrEnd(prevIndex, newIndex, startOrEnd){
 	var newCellY = newIndex % totalCols;
 	var newCellX = Math.floor((newIndex - newCellY) / totalCols);

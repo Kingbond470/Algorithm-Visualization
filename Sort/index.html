@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualization</title>
+    <!--css-->
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="array-inputs">
+                <p>Array Size</p>
+                <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                <p>Speed</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                <button id="a_generate">Create Array</button>
+            </div>
+            <div class="header_right">
+                <p class="nav-heading">Sort visualization</p>
+                <div class="algos">
+                    <button><a href="https://lamfo-unb.github.io/2019/04/21/Sorting-algorithms/">Details</a></button>
+                    <button >Bubble</button>
+                    <button >Merge</button>
+                    <button >Quick</button>
+                    <button style="margin-right: 0px;">Heap</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- visualization section part-->
+    <section>
+
+        <div id="Info_Cont1"> <!--making visual in center-->
+            <p></p>
+        </div>
+        <div id="array_container">          
+        </div>
+        <div id="Info_Cont2">
+            <p></p>
+        </div>
+
+    </section>
+    <!--footer section-->
+    <footer>
+
+    </footer>
+    <script src="./javascript/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./javascript/visualizations.js"></script>  <!--This should be loaded after main.js-->
+    <script src="./javascript/bubble_sort.js"></script>
+    <script src="./javascript/merge_sort.js"></script>
+    <script src="./javascript/quick_sort.js"></script>
+    <script src="./javascript/heap_sort.js"></script>
+</body>
+</html>

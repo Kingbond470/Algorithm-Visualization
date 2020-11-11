@@ -2,18 +2,23 @@
 <html>
 <head>
 	<title>Path</title>
+	<!--css link-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--bootstrap link-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/magic.min.css">
+	<!--fontawesome link-->
 	<script src="https://kit.fontawesome.com/d1f3dd87b7.js" crossorigin="anonymous"></script>
 </head>
+<!--body section -->
 <body>
 	<nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark" id="myNavbar">
   		<a class="navbar-brand" href="#" id="logo">Path</a>
+  		<!--creating a toggle-->
   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     		<span class="navbar-toggler-icon"></span>
 		</button>
-
+		<!--nav bar with drop down menu-->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    	<ul class="navbar-nav mr-auto">
 		      	<li class="nav-item dropdown" id="algorithms">
@@ -54,7 +59,7 @@
 	      	<!-- <button type="button" class="btn btn-outline-danger disabled" type="submit" id="stopBtn">Stop</button> -->
   		</div>
  	</nav>
-
+<!--displaying some info used in visualzation-->
  	<div class="d-flex flex-row flex-wrap m-2 justify-content-around">	
  		<div class="d-flex p-2">
  			<div class="key wall"></div>  
@@ -83,11 +88,11 @@
  		</div>
  	</div>
 
+ 	<!-- tutorial and infromatiom section-->
  	<div class="d-flex flex-column align-items-center" id="bigTableContainer">
 		<div id="tableContainer"></div>
 		<!-- <div id="update">Click or drag cells to build walls. <br/>Press the 'Start' button when you finish and have selected an algorithm.</div> -->
  	</div>
-
  	<div class="d-flex flex-row m-4 justify-content-center">
 		<!-- Button trigger for tutorial modal -->
 		<button type="button" class="btn btn-outline-info btn-lg" data-toggle="modal" data-target="#exampleModalLong">Tutorial View</button>
@@ -229,6 +234,9 @@
 				        <p>
 				        	<b>Analysis: </b> This is a poor algorithm for pathfinding. It is <u>unweighted</u> and does <u>not</u> guarantee the shortest path.
 				        </p>
+				        <p>
+				        	<b>Complexity:</b> The Time complexity of DFS is also O(V + E) when Adjacency List is used and O(V^2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges.
+				        </p>
 				        <p class="fun-fact">
 				        	<i><b>Fun Fact: </b> This algorithm was first investigated in the 19th century by French Mathematician Charles Trémaux.</i>
 				        </p>
@@ -251,6 +259,9 @@
 				        <p>
 				        	<b>Analysis: </b> This is an OK algorithm for pathfinding. It is <u>unweighted</u> but <u>guarantees</u> the shortest path.
 				        </p>
+				        <p>
+				        	<b>Complexity:</b> The Time complexity of BFS is O(V + E) when Adjacency List is used and O(V^2) when Adjacency Matrix is used, where V stands for vertices and E stands for edges.
+				        </p>
 				        <p class="fun-fact">
 				        	<i><b>Fun Fact: </b> This algorithm was first invented in 1945 by Konrad Zuse and was submitted in his rejected PhD thesis, but was not published until 1972.</i>
 				        </p>
@@ -272,6 +283,9 @@
 				        </p>
 				        <p>
 				        	<b>Analysis: </b> This is an OK algorithm for pathfinding. This algorithm performs very well in trees with unequal distances between nodes. But since this program only explores horizontally/vertically (with each move costing one), it behaves exactly the same as BFS. It is <u>unweighted</u> but <u>guarantees</u> the shortest path.
+				        </p>
+				        <p>
+				        	<b>Complexity:</b> Time Complexity of Dijkstra's Algorithm is O(V^2) but with min-priority queue it drops down to O(V+ElogV).
 				        </p>
 				        <p class="fun-fact">
 				        	<i><b>Fun Fact: </b> Edsger Dijkstra invented this algorithm in twenty minutes.</i>
@@ -296,6 +310,9 @@
 				        <p>
 				        	<b>Analysis: </b> This is the one of the best algorithms for pathfinding. It is <u>weighted</u> and it <u>guarantees</u> the shortest path.
 				        </p>
+				        <p>
+				        	<b>Complexity:</b>The time complexity of A* depends on the heuristic. In the worst case of an unbounded search space, the number of nodes expanded is exponential in the depth of the solution (the shortest path) d: O(bd), where b is the branching factor (the average number of successors per state).
+				        </p>
 				        <p class="fun-fact">
 				        	<i><b>Fun Fact: </b> A* was first created for the 'Shakey Project', which had the aim of building a mobile robot that could plan its own actions. It was later published in 1968 by Stanford Research Institute scientists.</i>
 				        </p>
@@ -315,7 +332,7 @@
 
 	<div class ="d-flex flex-column" id="results">
 		<div class="d-flex justify-content-center"> 
-			<i id="resultsIcon" class="fas fa-exclamation"></i>
+			<i id="resultsIcon" class="fas fa-star"></i>
 		</div>
 		<div id="duration" class="d-flex justify-content-center"> 
 	 		Please select an algorithm and press start.
@@ -324,10 +341,11 @@
 	 	</div>	 	
 	</div>
 
-
+<!-- jquery predefined link from offical account-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!--javascript link-->
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

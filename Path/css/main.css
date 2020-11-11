@@ -1,16 +1,67 @@
+/*
+Global Fonts
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+/*
+variable 
+*/
+:root {
+  /* dark shades of primary color*/
+  --clr-primary-1: hsl(43, 86%, 17%);
+  --clr-primary-2: hsl(43, 77%, 27%);
+  --clr-primary-3: hsl(43, 72%, 37%);
+  --clr-primary-4: hsl(42, 63%, 48%);
+  /* primary/main color */
+  --clr-primary-5: hsl(42, 78%, 60%);
+  /* lighter shades of primary color */
+  --clr-primary-6: hsl(43, 89%, 70%);
+  --clr-primary-7: hsl(43, 90%, 76%);
+  --clr-primary-8: hsl(45, 86%, 81%);
+  --clr-primary-9: hsl(45, 90%, 88%);
+  --clr-primary-10: hsl(45, 100%, 96%);
+  /* darkest grey - used for headings */
+  --clr-grey-1: hsl(209, 61%, 16%);
+  --clr-grey-2: hsl(211, 39%, 23%);
+  --clr-grey-3: hsl(209, 34%, 30%);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  /* grey used for paragraphs */
+  --clr-grey-5: hsl(210, 22%, 49%);
+  --clr-grey-6: hsl(209, 23%, 60%);
+  --clr-grey-7: hsl(211, 27%, 70%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --clr-grey-9: hsl(212, 33%, 89%);
+  --clr-grey-10: hsl(210, 36%, 96%);
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --clr-green-dark: hsl(125, 67%, 44%);
+  --clr-green-light: hsl(125, 71%, 66%);
+  --clr-black: #222;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --spacing1: 0.08rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+}
 body { 
+	background-color: var(--clr-primary-5);
     padding-top: 80px; 
     height: 100%;
 }
 
 td {
-    border: 1px solid #79d9ce;
+    border: 1px solid var(--clr-green-light); /* color of body table */
     width: 20px;
     height: 20px;
 }
 
 .key {
-	border: 1px solid #79d9ce;
+	border: 1px solid var(--clr-primary-7);
 	width: 20px;
     height: 20px;
     margin-right: 10px;
@@ -21,7 +72,7 @@ ul {
 }
 
 .btn-space {
-	margin-right: 5px;
+	margin-right: 10px;
 }
 
 #update {
@@ -31,42 +82,42 @@ ul {
 
 .wall {
 	transition : background-color 0.1s ease-in-out;
-	background-color: #262b28;
-	border-color: #262b28;
+	background-color: var(--clr-red-light);
+	border-color: var(--clr-red-light);
 }
 
 .none {
 	transition : background-color 0.1s ease-in-out;
 	background-color: white;
-	border-color: #79d9ce;
+	border-color: var(--clr-black);
 }
 
 .searching {
 	transition : background-color 0.08s ease-in-out;
-	background-color: #1cd4b5;
-	border-color: #1cd4b5;
+	background-color: var(--clr-grey-10);
+	border-color: var(--clr-grey-10);
 }
 
 .visited {
 	transition : background-color 0.08s ease-in-out;
-	background-color: #e89440;
-	border-color: #e89440;
+	background-color: var(--clr-green-light);
+	border-color: var(--clr-green-light);
 }
 
 .success {
 	transition : background-color 0.08s ease-in-out;
-	background-color: #ffee31;
-	border-color: #ffee31;
+	background-color: var(--clr-primary-1);
+	border-color: var(--clr-primary-1);
 }
 
 .start {
-	background-color: green;
-	border-color: green;
+	background-color: blue;
+	border-color: blue;
 }
 
 .end {
-	background-color: red;
-	border-color: red;
+	background-color: blue;
+	border-color: blue;
 }
 
 #bigTableContainer {
@@ -84,14 +135,14 @@ ul {
 #results {
 	height: 87px;
 	width: 120px;
-	background-color: #ffc107;
+	background-color: skyblue;
 	position: fixed;
-	right: 10px;
+	left: 5px;
 	bottom: 10px;
-	color: white;
+	color: green;
 	font-size: 12px;
 	text-align: center;
-	border: 1px dashed black;
+	border: 1.5px dashed black;
 }
 
 #resultsIcon {
@@ -109,5 +160,32 @@ ul {
 }
 
 .fun-fact {
-	color: darkgreen;
+	color: var(--clr-red-light);
+}
+
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1rem;
+    color: darkblue;
+}
+
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: black;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
 }
