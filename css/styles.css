@@ -241,7 +241,7 @@ navigation bar
   }
   .nav-links a {
     text-transform: capitalize;
-    color: var(--clr-primary-5);
+    color: lightseagreen;;
     font-weight: bold;
     letter-spacing: 0.15rem;
     -webkit-transition: var(--transition);
@@ -269,7 +269,7 @@ fixed nav bar
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);   /* change bg color */
+  background: goldenrod;   /* change bg color */
   z-index: 2;
   box-shadow: var(--light-shadow);
 }
